@@ -1,61 +1,96 @@
-<html>
+﻿<html>
 
 <head>
-    <meta name="author" content="Yeeku.H.Lee(CrazyIt.org)" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-    <title>登录页面</title>
-    <link href="./css/tab.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <meta .-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta .-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=11" id="mixia_vpid">
+  <title>Ra_cong的博客(建设中)</title>
+  <meta name=keywords content="Ra_cong">
+  <meta name=description content="Ra_cong">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<style>
-    h1 {
-        text-align: center;
-        width: 600px;
-        height: 50px;
-        color: #FF0066
-    }
-    
-    h2 {
-        text-align: center;
-        width: 80%;
-        height: 50px;
-        color: blueviolet;
-    }
-    
-    .tab {
-        margin: 0 auto;
-    }
-    
-    .title {
-        width: 580px;
-        height: 100px;
-        vertical-align: middle;
-        display: table-cell;
-        text-align: center;
-    }
-</style>
 
-<body style="background-image: url(./pic/ba.gif);background-size: cover">
-    <hr />
-    <div class="tab">
-        <h1 style="font-size:55px"><i>登录</i></h1>
-        <hr />
-        <br />
-        <a class="title"><img width="80px" src="./pic/登录用户.png" /></a>
-        <br />
-        <h2> I D ：<input id="name" name="username" type="text" />
-            <br /></h2>
-        <h2> 邮箱：<input id="email" name="emaildre" type="text" />
-        </h2>
-        <h2> 密码：<input id="passord" name="passord" type="password" /> </h2>
-        <h1> 没有账号？点击创建账号
-            <a href="注册.html"><img width="50px" src="./pic/用户.png" /> </a>
-        </h1>
-        <br />
-        <h2 class="title"><a style="color:chocolate ; font-size: 40px"><i>已有账号，点击登录</i></a>
-            <a href="注册.html"><img width="100px" src="./pic/登录提交.png" /></a>
-        </h2>
+<body>
+  <span class="mobile btn-mobile-menu">
+    <i class="fa fa-bars btn-mobile-menu__icon"></i>
+    <i class="fa fa-chevron-circle-up btn-mobile-close__icon hidden"></i>
+  </span>
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a title="Ra_cong"><img src="./icon/Ra_iocn.png" width="20%" height="20%"></a>
+        <h1 class="panel-cover__title panel-title"><a href="./index.html" title="Ra_cong">Ra_cong</a></h1>
+        <span class="panel-cover__subtitle panel-subtitle">
+          <script>hitokoto()</script>
+          <hr class="panel-cover__divider">
+          <p class="panel-cover__description">
+            今天2019.6.12是Ra_cong博客正式开始搭建的日子</br>本人现如今是一名探索计算机的初学小白</br>深感修行过浅，还需积极钻研</br>本博客为休闲时间创作,期待在未来时间里的变化</br>
+          </p>
+          <hr class="panel-cover__divider">
+          <p class="panel-cover__description">欢迎来到我的主页！</p>
+          <p class="footer">Copyright © 2019 <a href="./index.html" target="_blank">Ra_cong</a> All Rights Reserved.
+          </p>
+
+          <div class="navigation-wrapper">
+            <div>
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="./test/登陆.html" title="登录">登录(测试)</a></li>
+                  <li class="navigation__item"><a href="./test/注册.html" title="注册">注册(测试)</a></li>
+                  <li class="navigation__item"><a href="" title="c语言">c语言篇</a></li>
+                  <li class="navigation__item"><a href="" title="python">python篇</a></li>
+                  <li class="navigation__item"><a href="" title="web前端">web前端篇</a></li>
+                </ul>
+              </nav>
+            </div>
+            </br>
+            <div>
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+                  <!-- Weibo -->
+                  <li class="navigation__item">
+                    <a href="https://weibo.com/u/6429555507?is_all=1" title="我的微博" target="_blank"><img
+                        src="./icon/weibo.png" width="50">
+
+                    </a>
+                  </li>
+                  <!-- QQ -->
+                  <li class="navigation__item">
+                    <a data-v="" href="" title="扫一扫加我QQ" class="wechat"><img src="./icon/qq.png" width="50">
+                      <div data-v="" class="qrCode">
+                        <img sdata-v="" src="./icon/QQ.jpg" width="100" onclick="window.open()"></div>
+                      <i class="social fa fa-qq"></i>
+                    </a>
+                  </li>
+                  <!-- Weixin -->
+
+                  <li class="navigation__item">
+                    <a data-v="" href="" title="扫一扫加我微信" class="wechat"><img src="./icon/微信.png" width="50">
+                      <div data-v="" class="qrCode">
+                        <img sdata-v="" src="./icon/wechat.jpg" width="100" onclick="window.open()">
+                        <div data-v="" class="triangle-down"></div>
+                      </div>
+                      <i class="social fa fa-weixin"></i>
+                    </a>
+                  </li>
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:/" title="发邮件给我"><img src="./icon/邮件.png" width="50">
+                      <i class="social fa fa-envelope"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+      </div>
     </div>
+    <div class="panel-cover--overlay cover-slate"></div>
+  </div>
+  </header>
+
 </body>
-<hr/>
 
 </html>
