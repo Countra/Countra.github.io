@@ -27,7 +27,7 @@
              recalc = function () {
               var clientWidth = docEl.clientWidth;
               if (clientWidth === undefined) return;
-              docEl.style.fontSize = 80 * (clientWidth / 3200) + 'px';
+              docEl.style.fontSize = 90 * (clientWidth / 3200) + 'px';
              };
             if (doc.addEventListener === undefined) return;
             win.addEventListener(resizeEvt, recalc, false);
@@ -52,7 +52,7 @@
             </div>
           </br>
             <div>
-              <nav class="cover-navigation navigation--social" style="margin:0 auto; text-align: center">
+              <nav class="cover-navigation navigation--social">
                 <ul class="navigation">
                   <!-- Weibo -->
                   <li class="navigation__item">
