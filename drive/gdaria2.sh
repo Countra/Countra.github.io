@@ -127,3 +127,4 @@ echo "重启服务"
 sudo service aria2c restart
 sudo service filebrowser restart
 echo "finish"
+echo "filebower地址: "http://$ip:8080" AriaNg: "http://$ip/lixian""
