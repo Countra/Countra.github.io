@@ -113,7 +113,6 @@ sudo touch /root/.aria2/aria2.session
 sudo mv /tmp/Onekey-deploy_aria2/aria2.conf /root/.aria2/
 sudo mv /tmp/Onekey-deploy_aria2/updatetracker.sh /root/.aria2/
 sudo rm -rf ./install.sh
-clear
 secret="rpc-secret=$p"
 upload="on-download-complete=/root/rcloneupload.sh"
 sudo echo $upload >> /root/.aria2/aria2.conf
@@ -127,7 +126,7 @@ sudo chmod 777  /etc/init.d/filebrowser
 echo -e "\033[41;33m 授权完成 \033[0m"
 sudo systemctl daemon-reload
 echo -e "\033[41;33m 重启服务 \033[0m"
-sudo service aria2c restart
-sudo service filebrowser restart
+service aria2c restart
+service filebrowser restart
 echo -e "\033[41;33m Finish! \033[0m"
 echo "filebower地址: "http://$ip:8080" AriaNg: "http://$ip/lixian""
