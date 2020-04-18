@@ -128,9 +128,9 @@ sudo chmod 777  /etc/init.d/filebrowser
 echo -e "\033[41;33m 授权完成 \033[0m"
 sudo systemctl daemon-reload
 echo -e "\033[41;33m 重启服务 \033[0m"
-#service aria2c restart
+service aria2c restart
 echo "已重启aria2c"
-service filebrowser restart
-echo "已重启filebrowser"
+echo "请手动重启filebrowser"
 echo -e "\033[41;33m Finish! \033[0m"
 echo "filebower地址: "http://$ip:8080" AriaNg: "http://$ip/lixian""
+echo "由于filebrowser不知道为什么就是重启脚本卡死，请手动重启 ：service filebrowser restart"
