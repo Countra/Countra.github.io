@@ -71,7 +71,7 @@ $cmd2
 
 tmp="/tmp/Onekey-deploy_aria2"
 sudo rm -rf $tmp
-sudo git clone https://github.com/jer0y/Aria2Dash.git $tmp
+sudo git clone https://github.com/Countra/backup_aria2.git $tmp
 sudo rm -rf $dir/lixian
 sudo rm -rf $dir/downloads
 sudo mkdir -p $dir/lixian 
