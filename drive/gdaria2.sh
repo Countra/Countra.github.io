@@ -127,6 +127,7 @@ echo -e "\033[41;33m 授权完成 \033[0m"
 sudo systemctl daemon-reload
 echo -e "\033[41;33m 重启服务 \033[0m"
 service aria2c restart
+sleep 3
 echo -e "\033[41;33m 已重启aria2c \033[0m"
 service filebrowser restart
 echo -e "\033[41;33m 已重启filebrowser \033[0m"
