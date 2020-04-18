@@ -1,7 +1,7 @@
 #/bin/bash
-echo "安装依赖"
+echo -e "\033[41;33m 安装依赖 \033[0m"
 apt install sudo -y
-echo "依赖安装完成"
+echo -e "\033[41;33m 依赖安装完成 \033[0m"
 sudo rm -rf ./install.sh
 cd /
 
@@ -71,7 +71,7 @@ cmd2="$cmd install screen vim aria2 unzip git curl -y"
 $cmd2
 
 # 下载AriaNg
-echo "下载AriaNg"
+echo -e "\033[41;33m 下载AriaNg \033[0m"
 tmp="/tmp/Onekey-deploy_aria2"
 sudo rm -rf $tmp
 sudo git clone https://github.com/Countra/backup_aria2.git $tmp
@@ -96,9 +96,9 @@ sudo cat $dir/lixian/head.html > $dir/lixian/index.html
 sudo echo $link >> $dir/lixian/index.html
 sudo cat $dir/lixian/foot.html >> $dir/lixian/index.html
 #安装FileBrowser
-echo "开始安装fileBrowser"
+echo -e "\033[41;33m 开始安装fileBrowser \033[0m"
 curl -fsSL https://raw.githubusercontent.com/Countra/Countra.github.io/master/drive/get.sh | bash
-echo "完成安装fileBrowser"
+echo -e "\033[41;33m 完成安装fileBrowser \033[0m"
 
 
 
@@ -118,9 +118,12 @@ sudo echo $upload >> /root/.aria2/aria2.conf
 echo "设置systemctl"
 sudo cp $tmp/aria2c /etc/init.d/
 sudo cp $tmp/filebrowser /etc/init.d/
+echo "拷贝完成"
 sudo chmod 777  /etc/init.d/aria2c
 sudo chmod 777  /etc/init.d/filebrowser
+echo "授权完成"
 sudo systemctl daemon-reload
+echo "重启服务"
 sudo service aria2c restart
 sudo service filebrowser restart
 echo "finish"
