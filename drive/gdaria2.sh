@@ -1,4 +1,7 @@
 #/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
 echo -e "\033[41;33m 安装依赖 \033[0m"
 apt install sudo -y
 echo -e "\033[41;33m 依赖安装完成 \033[0m"
