@@ -68,7 +68,7 @@ cmd2="$cmd install screen vim aria2 unzip git curl -y"
 $cmd2
 
 # 下载AriaNg
-
+echo "下载AriaNg"
 tmp="/tmp/Onekey-deploy_aria2"
 sudo rm -rf $tmp
 sudo git clone https://github.com/Countra/backup_aria2.git $tmp
@@ -86,18 +86,20 @@ cat $dir/lixian/foot.html >> $dir/lixian/index.html
 
 #沃日，为啥一直bug。。。
 ip=$(curl -s https://ipinfo.io/ip)
+echo "你的公网ip是$ip"
 dir="/var/www/html"
 link="<a href="http://$ip:8080" target="blank">"
 sudo cat $dir/lixian/head.html > $dir/lixian/index.html
 sudo echo $link >> $dir/lixian/index.html
 sudo cat $dir/lixian/foot.html >> $dir/lixian/index.html
 #安装FileBrowser
-curl -fsSL https://filebrowser.xyz/get.sh | bash
+echo "开始安装fileBrowser"
+curl -fsSL https://raw.githubusercontent.com/Countra/Countra.github.io/master/drive/get.sh | bash
+echo "完成安装fileBrowser"
 
 
 
-
-#开始配置aria2
+echo "开始配置aria2"
 sudo rm -rf /root/.aria2
 sudo mkdir -p /root/.aria2
 sudo rm -rf /root/.aria2/*
@@ -110,7 +112,7 @@ secret="rpc-secret=$p"
 upload="on-download-complete=/root/rcloneupload.sh"
 sudo echo $upload >> /root/.aria2/aria2.conf
 
-#设置systemctl
+echo "设置systemctl"
 sudo cp $tmp/aria2c /etc/init.d/
 sudo cp $tmp/filebrowser /etc/init.d/
 sudo chmod 777  /etc/init.d/aria2c
@@ -118,3 +120,4 @@ sudo chmod 777  /etc/init.d/filebrowser
 sudo systemctl daemon-reload
 sudo service aria2c restart
 sudo service filebrowser restart
+echo "finish"
