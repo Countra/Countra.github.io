@@ -5,7 +5,7 @@ FileNum="$2";
 File="$3";
 MinSize="5"  #限制最低上传大小，默认5k
 MaxSize="157286400"  #限制最高文件大小(单位k)，默认15G
-RemoteDIR="/root/googledrive/";  #rclone挂载的本地文件夹，最后面保留/
+RemoteDIR="/gdrive/";  #rclone挂载的本地文件夹，最后面保留/
 LocalDIR="/var/www/html/downloads/";  #Aria2下载目录，最后面保留/
 
 if [[ -z $(echo "$FileNum" |grep -o '[0-9]*' |head -n1) ]]; then FileNum='0'; fi
