@@ -1,4 +1,7 @@
 #/bin/bash
+echo "安装依赖"
+apt install sudo -y
+echo "依赖安装完成"
 sudo rm -rf ./install.sh
 cd /
 
