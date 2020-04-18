@@ -115,16 +115,16 @@ secret="rpc-secret=$p"
 upload="on-download-complete=/root/rcloneupload.sh"
 sudo echo $upload >> /root/.aria2/aria2.conf
 
-echo "设置systemctl"
+echo "\033[41;33m 设置systemctl \033[0m"
 sudo cp $tmp/aria2c /etc/init.d/
 sudo cp $tmp/filebrowser /etc/init.d/
-echo "拷贝完成"
+echo "\033[41;33m 拷贝完成 \033[0m"
 sudo chmod 777  /etc/init.d/aria2c
 sudo chmod 777  /etc/init.d/filebrowser
-echo "授权完成"
+echo "\033[41;33m 授权完成 \033[0m"
 sudo systemctl daemon-reload
-echo "重启服务"
+echo "\033[41;33m 重启服务 \033[0m"
 sudo service aria2c restart
 sudo service filebrowser restart
-echo "finish"
+echo "\033[41;33m Finish! \033[0m"
 echo "filebower地址: "http://$ip:8080" AriaNg: "http://$ip/lixian""
