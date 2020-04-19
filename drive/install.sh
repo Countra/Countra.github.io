@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 apt-get install unzip -y
 apt-get install sudo -y
+apt-get install fuse -y
 # error codes
 # 0 - exited without problems
 # 1 - parameters not supported were used or some unexpected error occurred

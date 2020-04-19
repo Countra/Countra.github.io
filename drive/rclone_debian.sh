@@ -2,6 +2,7 @@
  
 apt-get install -y nload htop fuse p7zip-full
 apt-get install unzip -y
+apt-get install fuse -y
 KernelBit="$(getconf LONG_BIT)"
 [[ "$KernelBit" == '32' ]] && KernelBitVer='i386'
 [[ "$KernelBit" == '64' ]] && KernelBitVer='amd64'
