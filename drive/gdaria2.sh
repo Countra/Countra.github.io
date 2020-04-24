@@ -11,8 +11,6 @@ cd /
 #Aria2密码
 p=1234
 
-#是否安装Apache2
-a=y
 
 #默认网页路径
 dir="/var/www/html"
@@ -57,19 +55,22 @@ else
 
 fi
 
+echo "是否安装Apache2,输入y/n"
+read choice
 
-#安装必要的包
+echo "安装必要的包"
 $cmd update 
 #根据需要，安装Apache2
-if [ $a = "y" ] ; then
+if [ $choice = "y" ] ; then
     cmd1="$cmd install apache2 -y"
     $cmd1
     sudo mv $dir/index.html $dir/index.html0
 else  
     echo "I will not install apache2."
+
 fi
 
-#安装必要的
+echo "安装必要的"
 cmd2="$cmd install screen vim aria2 unzip git curl -y"
 $cmd2
 
