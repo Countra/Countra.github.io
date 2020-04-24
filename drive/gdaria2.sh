@@ -57,7 +57,7 @@ fi
 
 echo "是否安装Apache2,输入y/n"
 read choice
-
+echo "你的选择是 $choice"
 echo "安装必要的包"
 $cmd update 
 #根据需要，安装Apache2
