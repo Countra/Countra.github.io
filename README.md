@@ -1,5 +1,5 @@
 # Countra.github.io
 
-Hello everyone！Welcome to my index page!
+<center>Hello everyone！Welcome to my index page!</center>
 
-Countra
+<p align=right>Edit by Countra</p>
