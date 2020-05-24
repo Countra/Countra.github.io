@@ -9,7 +9,7 @@ Font="\033[0m"
 cd /usr/share/vim
 ls > ~/temporary.txt
 version=$(grep -E "vim[0-9][0-9]" ~/temporary.txt)
-wget -P /usr/share/vim/${version}/colors https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+wget -P /usr/share/vim/${version}/colors https://raw.githubusercontent.com/Countra/Countra.github.io/master/drive/gruvbox.vim
 rm ~/temporary.txt
 cd ~
 echo "set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936" >> .vimrc
