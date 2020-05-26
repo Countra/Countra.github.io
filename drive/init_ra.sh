@@ -20,6 +20,7 @@ echo "set bg=dark" >> .vimrc
 echo "syntax on" >> .vimrc
 echo "set nu" >> .vimrc
 echo "set hlsearch" >> .vimrc
+echo "set incsearch" >> .vimrc
 echo "set number" >> .vimrc
 echo "set ignorecase" >> .vimrc
 echo "set smartcase" >> .vimrc
