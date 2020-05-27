@@ -25,6 +25,7 @@ echo "set number" >> .vimrc
 echo "set ignorecase" >> .vimrc
 echo "set smartcase" >> .vimrc
 echo "set cursorline" >> .vimrc
+echo "set wrap" >> .vimrc
 echo "inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
 inoremap { {}<LEFT>
