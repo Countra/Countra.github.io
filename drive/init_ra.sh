@@ -2,10 +2,38 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-
+OK="${Green}[OK]${Font}"
+Error="${Red}[错误]${Font}"
 RedBG="\033[41;37m"
+GreenBG="\033[42;37m"
 Font="\033[0m"
+version="None"
+ID="None"
 
+# 判断版本
+ID=$(cat /etc/*release | grep "^ID=" | sed 's/["ID=]//g')
+
+if [[ "${ID}" == "centos" ]];then
+        echo -e "${OK} ${GreenBG} 当前系统为 Centos${Font}"
+        INS="yum"
+    elif [[ "${ID}" == "debian" ]];then
+        echo -e "${OK} ${GreenBG} 当前系统为 Debian${Font}"
+        INS="apt"
+        $INS update
+    elif [[ "${ID}" == "ubuntu" ]];then
+        echo -e "${OK} ${GreenBG} 当前系统为 Ubuntu${Font}"
+        INS="apt"
+        $INS update
+    else
+        echo -e "${Error} ${RedBG} 当前系统为 ${ID} 不在支持的系统列表内 ${Font}"
+        exit 1
+    fi
+
+# 安装常用软件
+$INS install screen -y
+$INS install iftop -y
+
+# 配置VIM
 cd /usr/share/vim
 ls > ~/temporary.txt
 version=$(grep -E "vim[0-9][0-9]" ~/temporary.txt)
