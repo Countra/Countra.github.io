@@ -133,5 +133,6 @@ service aria2c restart
 echo "已重启aria2c"
 echo "请手动重启filebrowser"
 echo -e "\033[41;33m Finish! \033[0m"
-echo "filebower地址: "http://$ip:8080"（默认账户密码均为admin） AriaNg: "http://$ip/lixian""
+echo "filebower地址: "http://$ip:8080"（默认账户密码均为admin） 若服务器为apache AriaNg: "http://$ip/lixian""
+echo "网站地址：/var/www/html/lixian 服务器为nginx，请修改nginx配置文件，位置：/etc/nginx/nginx.conf"
 echo "由于filebrowser不知道为什么就是重启脚本卡死，请手动重启 ：service filebrowser restart"
